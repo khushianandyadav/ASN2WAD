@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery E-commerce Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles for the Sidebar */
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding-top: 30px;
+        }
+
+        .sidebar .nav-item {
+            margin: 10px 0;
+        }
+
+        .sidebar .nav-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar .nav-item a:hover {
+            background-color: #34495e;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        /* Custom Styles for the main content */
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+
+        .card-body {
+            font-size: 18px;
+            
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* Form Styles */
+        .form-section {
+            margin-top: 40px;
+        }
+
+        .form-section h3 {
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+<div class="sidebar">
+    <h2 class="text-center text-warning">LUXE JEWELS</h2> <!-- Site Name -->
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Orders</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Customers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+        </li>
+    </ul>
+</div>
+
+      
+
+
+    
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Statistics Cards -->
+                <div class="col-md-3">
+                    <div class="card text-white bg-dark mb-4">
+                        <div class="card-body">
+                            <h6>Total Sales</h6>
+                            <p>Rs. 2,345,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card text-white bg-success mb-4">
+                        <div class="card-body">
+                            <h6>Total Orders</h6>
+                            <p>1,280</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card text-white bg-warning mb-4">
+                        <div class="card-body">
+                            <h6>Total Products</h6>
+                            <p>572</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card text-white bg-danger mb-4">
+                        <div class="card-body">
+                            <h6>Total Customers</h6>
+                            <p>3,120</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jewellery Product Images Section -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="GOLD.jpg" class="card-img-top" alt="Gold Necklace">
+                        <div class="card-body">
+                            <h5 class="card-title">Gold Necklace</h5>
+                            <p class="card-text">Elegant 18k gold necklace with a delicate design, perfect for any occasion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="dia.png" class="card-img-top" alt="Diamond Earrings">
+                        <div class="card-body">
+                            <h5 class="card-title">Diamond Earrings</h5>
+                            <p class="card-text">Stunning diamond earrings that add sparkle to any outfit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="sil.png" class="card-img-top" alt="Silver Bracelet">
+                        <div class="card-body">
+                            <h5 class="card-title">Silver Bracelet</h5>
+                            <p class="card-text">A sleek and stylish sterling silver bracelet for everyday wear.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Section for Adding New Jewellery Product -->
+            <div class="form-section">
+                <h3>ADD NEW JEWELLERY PRODUCT</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="productName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="productName" placeholder="Enter product name (e.g., Diamond Ring)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productDescription" class="form-label">Product Description</label>
+                        <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description (e.g., Stunning diamond ring with 1 carat of diamonds)"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="productPrice" placeholder="Enter price (e.g., 1500)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productImage" class="form-label">Product Image URL</label>
+                        <input type="text" class="form-control" id="productImage" placeholder="Enter image URL (e.g., image.jpg)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
